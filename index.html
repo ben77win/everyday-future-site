@@ -12,14 +12,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg-start: #F5EDD9;
-      --bg-end: #FBF7EF;
-      --accent: #F4A460;
-      --green: #2D4A35;
-      --text: #1C1C1C;
-      --muted: #7A7060;
-      --border: #DDD3BE;
-      --light-accent-bg: hsla(36, 60%, 88%, 0.32);
+      --bg-hero:  #E7D1B5;
+      --bg-cream: #F5EDE0;
+      --bg-end:   #FAF6F0;
+      --accent:   #F4A460;
+      --green:    #2D4A35;
+      --text:     #1C1C1C;
+      --muted:    #7A7060;
+      --border:   #DDD3BE;
+      --card-bg:  hsla(34, 44%, 90%, 0.55);
     }
 
     html { scroll-behavior: smooth; }
@@ -33,7 +34,7 @@
     /* ── MARKER HIGHLIGHT ── */
     .mark {
       background-color: var(--accent);
-      padding: 0 0.08em;
+      padding: 0.05em 0.1em;
       border-radius: 1px;
     }
 
@@ -45,47 +46,47 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding: 1.25rem 4vw;
-      background: rgba(245, 237, 217, 0.80);
+      padding: 1rem 4vw;
+      background: rgba(231, 209, 181, 0.78);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
 
     header img.logo {
-      height: 68px;
+      height: 139px;
       width: auto;
     }
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(180deg, var(--bg-start) 0%, #EDE5CE 100%);
-      padding: 8vw 4vw 0;
+      background: linear-gradient(170deg, var(--bg-hero) 0%, #DEC89F 60%, #C9AF85 100%);
+      padding: 6vw 4vw 0;
       position: relative;
-      overflow: hidden;
     }
 
     .hero-inner {
-      max-width: 1100px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding-bottom: 6vw;
+      padding-bottom: 8vw;
     }
 
     .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+      font-size: clamp(3rem, 4.7vw, 70px);
       font-weight: 600;
       line-height: 1.1;
       letter-spacing: -0.01em;
       margin-bottom: 1.5rem;
-      max-width: 800px;
+      white-space: nowrap;
     }
 
     .hero p {
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-size: clamp(0.95rem, 1.5vw, 1.15rem);
       color: var(--muted);
       font-weight: 300;
-      max-width: 500px;
+      max-width: 520px;
       line-height: 1.7;
+      padding-left: 0.15em;
     }
 
     /* SVG wave divider */
@@ -104,13 +105,18 @@
     }
 
     .green-section-inner {
-      max-width: 900px;
+      max-width: 1400px;
       margin: 0 auto;
+    }
+
+    /* Text constrained to ~60% left, matching Squarespace grid columns 3–18/26 */
+    .green-content {
+      max-width: 62%;
     }
 
     .green-section h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-size: clamp(1.8rem, 3.2vw, 3rem);
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 2rem;
@@ -122,47 +128,46 @@
     }
 
     .green-section p {
-      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-      line-height: 1.85;
-      color: rgba(255,255,255,0.85);
+      font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+      line-height: 1.9;
+      color: rgba(255,255,255,0.82);
       margin-bottom: 1.25rem;
     }
 
     .green-section p strong {
       color: #fff;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .green-section .italic-question {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-size: clamp(1.3rem, 2.2vw, 1.8rem);
       font-weight: 400;
-      color: rgba(255,255,255,0.9);
-      margin: 2rem 0;
+      color: rgba(255,255,255,0.88);
+      margin: 1.75rem 0;
       line-height: 1.4;
     }
 
     .audience-list {
       list-style: none;
-      margin: 1.5rem 0;
+      margin: 1rem 0;
     }
 
     .audience-list li {
-      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-      color: rgba(255,255,255,0.85);
-      padding: 0.4rem 0;
-      line-height: 1.6;
+      font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+      color: rgba(255,255,255,0.82);
+      padding: 0.3rem 0;
+      line-height: 1.7;
     }
 
-    .audience-list li strong {
-      color: #fff;
-    }
+    .audience-list li strong { color: #fff; }
 
     .green-section .closing {
-      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-      color: rgba(255,255,255,0.85);
-      margin-top: 1.5rem;
+      font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+      color: rgba(255,255,255,0.82);
+      margin-top: 1.25rem;
+      line-height: 1.9;
     }
 
     .wave-divider-flip {
@@ -173,151 +178,108 @@
 
     /* ── ABOUT / TAYLOR SECTION ── */
     .about-section {
-      background-color: var(--bg-end);
-      padding: 6vw 4vw;
+      background-color: #fff;
+      padding: 0 0 0 4vw;
     }
 
     .about-grid {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5vw;
+      grid-template-columns: 3fr 2fr;
       align-items: start;
     }
 
     .about-text-card {
-      background: var(--light-accent-bg);
-      border-radius: 2px;
-      padding: 6%;
+      background: var(--card-bg);
+      padding: 6% 6% 6% 0;
     }
 
     .about-text-card h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
 
     .about-text-card p {
-      font-size: clamp(0.9rem, 1.3vw, 1rem);
+      font-size: clamp(0.88rem, 1.2vw, 1rem);
       color: var(--muted);
-      line-height: 1.85;
-      margin-bottom: 1.1rem;
+      line-height: 1.9;
+      margin-bottom: 1rem;
     }
 
     .about-text-card p strong {
       color: var(--text);
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    .about-text-card .italic-question {
+    .about-text-card .italic-line {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      font-size: clamp(1rem, 1.6vw, 1.3rem);
       color: var(--text);
-      margin: 1.25rem 0;
+      margin: 1rem 0;
       line-height: 1.4;
     }
 
     .method-list {
-      list-style: none;
-      margin: 1.5rem 0;
+      list-style: decimal;
+      padding-left: 1.4rem;
+      margin: 0.75rem 0 1rem;
     }
 
     .method-list li {
-      font-size: clamp(0.9rem, 1.3vw, 1rem);
+      font-size: clamp(0.88rem, 1.2vw, 1rem);
       color: var(--muted);
-      padding: 0.35rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-      line-height: 1.6;
-    }
-
-    .method-list li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
+      padding: 0.25rem 0;
+      line-height: 1.7;
     }
 
     .method-list li strong {
       color: var(--text);
-      font-weight: 500;
+      font-weight: 600;
+    }
+
+    .about-text-card .traditional-bio {
+      font-style: italic;
+      font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+      margin-top: 0.5rem;
+    }
+
+    .about-image {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .about-image img {
       width: 100%;
-      border-radius: 2px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
       display: block;
     }
 
-    /* ── CONTACT / CTA ── */
-    .contact-section {
-      background: linear-gradient(180deg, var(--bg-end) 0%, var(--bg-start) 100%);
-      text-align: center;
-      padding: 7vw 4vw 8vw;
-    }
-
-    .contact-inner {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-section p.lead {
-      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-      color: var(--muted);
-      line-height: 1.75;
-      margin-bottom: 2.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--green);
-      color: #fff;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 1rem 2.75rem;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: opacity 0.2s;
-    }
-
-    .btn:hover { opacity: 0.82; }
-
     /* ── FOOTER ── */
     footer {
-      border-top: 1px solid var(--border);
-      background: var(--bg-start);
-      padding: 2.5rem 4vw;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
+      background: var(--bg-hero);
+      padding: 3.5rem 4vw;
     }
 
-    footer img.logo {
-      height: 38px;
-      width: auto;
-      opacity: 0.65;
-    }
-
-    footer p {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    footer a {
-      color: var(--muted);
+    footer a.email-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 400;
+      color: var(--text);
       text-decoration: none;
     }
 
-    footer a:hover { color: var(--text); }
+    footer a.email-link:hover {
+      text-decoration: underline;
+    }
 
     /* ── FADE IN ── */
     .fade-in {
@@ -332,31 +294,23 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      header { padding: 1rem 6vw; }
-      header img.logo { height: 52px; }
+    @media (max-width: 900px) {
+      header { padding: 0.75rem 6vw; }
+      header img.logo { height: 68px; }
 
-      .hero { padding: 12vw 6vw 0; }
-      .hero-inner { padding-bottom: 8vw; }
+      .hero { padding: 10vw 6vw 0; }
+      .hero h1 { white-space: normal; font-size: clamp(2.4rem, 8vw, 3.5rem); }
+      .hero-inner { padding-bottom: 10vw; }
 
       .green-section { padding: 10vw 6vw; }
-      .about-section { padding: 10vw 6vw; }
+      .green-content { max-width: 100%; }
 
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
+      .about-section { padding: 0; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-text-card { padding: 8vw 6vw; }
+      .about-image { position: relative; height: 60vw; }
 
-      .about-image { order: -1; }
-
-      .contact-section { padding: 12vw 6vw; }
-
-      footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2.5rem 6vw;
-      }
+      footer { padding: 3rem 6vw; }
     }
   </style>
 </head>
@@ -387,30 +341,32 @@
   <!-- GREEN SECTION -->
   <section class="green-section fade-in">
     <div class="green-section-inner">
-      <h2>You're a <span class="mark">Creative</span> who does work differently.</h2>
-      <p>
-        You're an original thinker and compelled to create, increasingly intentional about
-        cultivating who you are and crafting what you do. But your attention and energy are
-        limited resources to invest, and you're <strong>experiencing some discomfort, disillusion,
-        and disorientation in pursuit of what you want.</strong>
-      </p>
-      <p class="italic-question">What is the future you're creating every day?</p>
-      <p>
-        You want to fully engage with your experience and expand your growth —
-        <strong>autonomy, wealth, excellence, and impact matter.</strong> But you're holding back
-        from going to your edge of what feels possible, opening to outcomes, and
-        <strong>investing in the process of who you're becoming.</strong>
-      </p>
-      <p class="italic-question">How are you growing?</p>
-      <p>Whether you're</p>
-      <ul class="audience-list">
-        <li>… a <strong>solopreneur</strong> challenged with managing yourself and your business</li>
-        <li>… a <strong>first-time founder</strong> scaling your vision and learning how to lead</li>
-        <li>… an <strong>executive with entrepreneurial style</strong> and navigating your potential</li>
-      </ul>
-      <p class="closing">
-        You're seeking support to shape, shift, and scale your growth for a better future every day.
-      </p>
+      <div class="green-content">
+        <h2>You're a <span class="mark">Creative</span> who does work differently.</h2>
+        <p>
+          You're an original thinker and compelled to create, increasingly intentional about
+          cultivating who you are and crafting what you do. But your attention and energy are
+          limited resources to invest, and you're <strong>experiencing some discomfort, disillusion,
+          and disorientation in pursuit of what you want.</strong>
+        </p>
+        <p class="italic-question">What is the future you're creating every day?</p>
+        <p>
+          You want to fully engage with your experience and expand your growth —
+          <strong>autonomy, wealth, excellence, and impact matter.</strong> But you're holding back
+          from going to your edge of what feels possible, opening to outcomes, and
+          <strong>investing in the process of who you're becoming.</strong>
+        </p>
+        <p class="italic-question">How are you growing?</p>
+        <p>Whether you're</p>
+        <ul class="audience-list">
+          <li>… a <strong>solopreneur</strong> challenged with managing yourself and your business</li>
+          <li>… a <strong>first-time founder</strong> scaling your vision and learning how to lead</li>
+          <li>… an <strong>executive with entrepreneurial style</strong> and navigating your potential</li>
+        </ul>
+        <p class="closing">
+          You're seeking support to shape, shift, and scale your growth for a better future every day.
+        </p>
+      </div>
     </div>
     <svg class="wave-divider-flip" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,80 C360,0 1080,0 1440,80 L1440,0 L0,0 Z" fill="#2D4A35"/>
@@ -449,37 +405,47 @@
           My focus is Creative Entrepreneurs because I believe you have an outsized impact on our
           future, and I connect with how you think, feel, and approach work. Like you, I've
           sometimes held back and felt stuck or lost, struggled with being an imposter, and wrestled
-          with the curious combination of uninspired and overwhelmed.
+          with the curious combination of uninspired and overwhelmed. There is a different way to work.
         </p>
-        <p class="italic-question">There is a different way to work.</p>
         <p>
-          There is an edge of acceptance and ambition where you can consistently exist and constantly
-          evolve. Good news: you're the gatekeeper to this open threshold of potential. Bad news: no
-          one is coming to let you do the work you want and the life you want to live.
+          <strong>There is an edge of acceptance and ambition where you can consistently exist and
+          constantly evolve.</strong> Good news: you're the gatekeeper to this open threshold of
+          potential. Bad news: no one is coming to let you do the work you want and the life you
+          want to live.
         </p>
-        <p>I meet you where you are in three ways:</p>
-        <ul class="method-list">
+        <p>I meet you where you are in three ways,</p>
+        <ol class="method-list">
           <li><strong>Reveal</strong> what the process of growth is and how it works</li>
           <li><strong>Reflect</strong> how you can participate in the process to transform your experience of work</li>
           <li><strong>Reciprocate</strong> your commitment to the process with collaboration and accountability</li>
-        </ul>
+        </ol>
         <p>
-          What you really want is how you believe you will feel when you have that next desired
-          outcome. The emphasis on the process is because it offers you the freedom to choose
-          well-being every day, even in the most challenging circumstances, as you pursue a better
-          future.
+          You might be curious about outcomes: <strong>autonomy, wealth, excellence, and impact matter.</strong>
+          You can create the future states of success you want. Notice what you've already achieved,
+          only to be launched into a fresh iteration of who you're becoming.
+          <strong>What you really want is how you believe you will feel when you have that next
+          desired outcome.</strong> The emphasis on the process is because it offers you the freedom
+          to choose well-being every day, even in the most challenging circumstances, as you pursue
+          a better future.
         </p>
         <p>
           Like you, I'm working while living real life every day. In addition to being a coach,
           employer, and investor, I am a partner, mom, friend, family, and community member.
-          Your practice of the process cannot change other people, but it can change your
-          relationships for the better.
+          Our growth is integrated with the work and lives of others. Your practice of the process
+          cannot change other people, but it can change your relationships for the better.
+        </p>
+        <p>
+          I'm also a human and subject to suffering; I get sick, I am wrong, I make mistakes, and
+          I am affected by unforeseen and undesirable events. Your practice of the process cannot
+          protect you from pain, but it can change your experience of working with discomfort for
+          the better.
         </p>
         <p>
           If you've made it this far, something is resonating, and I want to hear from you.
           I want to learn who you are and who you're becoming. I want to support your process
           so you can experience well-being as you pursue a better future every day.
         </p>
+        <p class="traditional-bio">(And, if you were expecting a more traditional bio, you can get that here.)</p>
       </div>
       <div class="about-image">
         <img
@@ -490,33 +456,12 @@
     </div>
   </section>
 
-  <!-- CONTACT / CTA -->
-  <section class="contact-section fade-in">
-    <div class="contact-inner">
-      <p class="lead">
-        I want to hear from you. Reach out to start a conversation about what coaching could
-        look like for you.
-      </p>
-      <a class="btn" href="mailto:coach@everydayfuture.work">coach@everydayfuture.work</a>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
-    <a href="/">
-      <img
-        class="logo"
-        src="https://images.squarespace-cdn.com/content/v1/6453ff3afc0ba1098f61fb15/751b1d12-1841-4b23-addc-25a0c8e610a4/Modern+Luxury+Logo+.png"
-        alt="Every Day Future"
-      />
-    </a>
-    <p>&copy; <span id="year"></span> Every Day Future. All rights reserved.</p>
-    <p><a href="mailto:coach@everydayfuture.work">coach@everydayfuture.work</a></p>
+    <a class="email-link" href="mailto:coach@everydayfuture.work">coach@everydayfuture.work</a>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
